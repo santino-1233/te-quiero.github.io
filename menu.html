@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú | Té Quiero Pastelería</title>
+  <meta name="description" content="Menú de Té Quiero Pastelería: tortas, facturas y pastelería artesanal, con precios actualizados.">
+  <meta name="theme-color" content="#8CCDB7">
+
+  <!-- Tipografías del menú -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       HEADER (misma barra que la página de inicio)
+       ====================================================== -->
+  <header class="site-header is-visible" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Té Quiero Pastelería, ir al inicio">
+        <img src="assets/logo-header.png" alt="Té Quiero Pastelería">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menú">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">Inicio</a></li>
+          <li><a href="menu.html" class="site-nav__link" aria-current="page">Menú</a></li>
+          <li><a href="index.html#info" class="site-nav__link">Info</a></li>
+          <li><a href="index.html#ubicacion" class="site-nav__link">Ubicación</a></li>
+          <li><a href="index.html#contacto" class="site-nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="menu-app" id="inicio">
+
+    <header class="menu-hero">
+      <div class="hero-contenido">
+        <!-- TODO: reemplazar por el PNG de "Hecho a mano, todos los días" -->
+        <p class="hero-script">Hecho a mano, todos los días</p>
+        <div class="ornamento" aria-hidden="true">
+          <span></span>
+          <svg viewBox="0 0 24 24" class="corazon"><path d="M12 21s-7.5-4.6-9.6-9.1C1 8.5 3 5 6.5 5c2 0 3.5 1.2 5.5 3 2-1.8 3.5-3 5.5-3C21 5 23 8.5 21.6 11.9 19.5 16.4 12 21 12 21z"/></svg>
+          <span></span>
+        </div>
+        <h1>Nuestro Menú</h1>
+        <p id="estado" class="estado">Cargando menú…</p>
+      </div>
+    </header>
+
+    <nav id="navegacion" class="navegacion" aria-label="Categorías"></nav>
+
+    <div id="menu" class="menu"></div>
+
+    <div class="menu-pie">
+      <p class="menu-pie__texto">Precios en pesos argentinos</p>
+      <div class="menu-pie__acciones">
+        <a class="btn btn--primary" href="https://wa.me/5491136860671" target="_blank" rel="noopener">
+          Hacé tu pedido por WhatsApp
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <img class="site-footer__logo" src="assets/logo-header.png" alt="Té Quiero Pastelería">
+      <p class="site-footer__text">&copy; <span id="year"></span> Té Quiero Pastelería. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Header, menú móvil y año (sin intro en esta página) -->
+  <script src="js/main.js"></script>
+  <!-- Carga del menú desde Google Sheets -->
+  <script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Té Quiero Pastelería</title>
+  <meta name="description" content="Té Quiero Pastelería. Tortas, facturas y pastelería artesanal. Mirá nuestro menú, visitanos o escribinos por WhatsApp.">
+  <meta name="theme-color" content="#8CCDB7">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       INTRO: video del logo (se reproduce en cada carga)
+       ====================================================== -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <video class="intro__video" id="introVideo" muted playsinline preload="auto">
+      <source src="assets/intro.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Té Quiero Pastelería, ir al inicio">
+        <img src="assets/logo-header.png" alt="Té Quiero Pastelería">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menú">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">Inicio</a></li>
+          <li><a href="menu.html" class="site-nav__link">Menú</a></li>
+          <li><a href="#info" class="site-nav__link">Info</a></li>
+          <li><a href="#ubicacion" class="site-nav__link">Ubicación</a></li>
+          <li><a href="#contacto" class="site-nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================================================
+         INICIO
+         ====================================================== -->
+    <section class="hero reveal" id="inicio">
+      <div class="container hero__inner">
+        <img class="hero__logo" src="assets/logo-header.png" alt="Té Quiero Pastelería">
+        <p class="hero__text">
+          [Frase de bienvenida o slogan de la pastelería]
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="menu.html">Ver menú</a>
+          <a class="btn btn--ghost" href="https://wa.me/5491136860671" target="_blank" rel="noopener">
+            Pedí por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         INFO
+         ====================================================== -->
+    <section class="section reveal" id="info">
+      <div class="container">
+        <h2 class="section__title">[Título de la sección Info]</h2>
+        <p class="section__text">
+          [Texto descriptivo: qué hacen, especialidades, historia.]
+        </p>
+
+        <div class="schedule">
+          <h3 class="schedule__title">Horarios</h3>
+          <ul class="schedule__list">
+            <li><span>Lunes a viernes</span><span>[00:00 a 00:00]</span></li>
+            <li><span>Sábados</span><span>[00:00 a 00:00]</span></li>
+            <li><span>Domingos</span><span>[00:00 a 00:00]</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         UBICACIÓN
+         ====================================================== -->
+    <section class="section section--alt reveal" id="ubicacion">
+      <div class="container">
+        <h2 class="section__title">Ubicación</h2>
+        <p class="section__text">
+          [Dirección escrita, por ejemplo: Calle 000, Quilmes, Buenos Aires]
+        </p>
+        <a class="btn btn--primary"
+           href="https://www.google.com/maps/place/T%C3%A9+Quiero/@-34.8067363,-58.2784819,16.75z/data=!3m1!5s0x95a329601a4ecad9:0x8eed13e575cde13f!4m14!1m7!3m6!1s0x95a3295f7c7ccfc9:0x5fe5d638825499c7!2sRojo+Bar!8m2!3d-34.8037948!4d-58.280502!16s%2Fg%2F1yfdr06fd!3m5!1s0x95a329601c0f245d:0x686f7a192fe13fee!8m2!3d-34.8077869!4d-58.2797511!16s%2Fg%2F11b88ljzsv?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+           target="_blank" rel="noopener">
+          Cómo llegar
+        </a>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CONTACTO
+         ====================================================== -->
+    <section class="section reveal" id="contacto">
+      <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <div class="contact">
+          <a class="contact__item" href="https://wa.me/5491136860671" target="_blank" rel="noopener">
+            <span class="contact__label">WhatsApp</span>
+            <span class="contact__value">+54 9 11 3686-0671</span>
+          </a>
+          <a class="contact__item" href="https://www.instagram.com/tequieropasteleria" target="_blank" rel="noopener">
+            <span class="contact__label">Instagram</span>
+            <span class="contact__value">@tequieropasteleria</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <img class="site-footer__logo" src="assets/logo-header.png" alt="Té Quiero Pastelería">
+      <p class="site-footer__text">&copy; <span id="year"></span> Té Quiero Pastelería. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Intro, header, revelado y menú móvil -->
+  <script src="js/main.js"></script>
+</body>
+</html>

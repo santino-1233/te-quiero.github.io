@@ -1,0 +1,331 @@
+/* =========================================================
+   Menú (scoped dentro de .menu-app para no chocar con la web)
+   ========================================================= */
+.menu-app * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-app {
+  --arena: #8CCDB7;
+  --arena-oscura: #80BCA8;
+  --papel: #A8DCC9;
+  --carbon: #1E4A3D;
+  --gris: #3A6E5F;
+  --menta: #FFFFFF;
+  --menta-suave: #B9E5D6;
+  --linea: #7DB9A3;
+}
+
+.menu-app {
+  font-family: "Lora", Georgia, serif;
+  color: var(--carbon);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--arena);
+  
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.11  0 0 0 0 0.1  0 0 0 0.09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+.menu-app .ornamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.menu-app .ornamento span {
+  width: 56px;
+  height: 1px;
+  background: var(--carbon);
+  opacity: 0.35;
+}
+
+.menu-app .corazon {
+  width: 18px;
+  height: 18px;
+  fill: var(--menta);
+  stroke: var(--carbon);
+  stroke-width: 0.6;
+}
+
+.menu-app .menu-hero {
+  text-align: center;
+  padding: 4rem 1.25rem 2.5rem;
+}
+
+.menu-app .hero-script {
+  font-family: "Pinyon Script", cursive;
+  font-size: 1.9rem;
+  color: var(--gris);
+  margin-bottom: 0.75rem;
+}
+
+.menu-app .menu-hero h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 3.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 1.25rem 0 0.5rem;
+  line-height: 1.1;
+}
+
+.menu-app .estado {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+.menu-app .estado.error {
+  color: #8A1F14;
+}
+
+.menu-app .navegacion {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0.9rem 1rem;
+  background: rgba(140, 205, 183, 0.94);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid var(--linea);
+  border-bottom: 1px solid var(--linea);
+}
+
+.menu-app .navegacion::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-app .navegacion a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--carbon);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.menu-app .navegacion a:hover {
+  background: var(--menta-suave);
+}
+
+.menu-app .menu {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem 2rem;
+}
+
+.menu-app .categoria {
+  padding: 3rem 0 1rem;
+  scroll-margin-top: 5rem;
+}
+
+.menu-app .categoria + .categoria {
+  border-top: 1px solid var(--linea);
+}
+
+.menu-app .categoria h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.menu-app .categoria h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 0.6rem auto 0;
+  background: var(--menta);
+  border-radius: 2px;
+}
+
+.menu-app .subcategoria {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--gris);
+  margin: 1.75rem 0 0.25rem;
+  text-align: center;
+}
+
+.menu-app .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px dotted var(--linea);
+}
+
+.menu-app .item:last-child {
+  border-bottom: none;
+}
+
+.menu-app .item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-app .item-nombre {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--carbon);
+}
+
+.menu-app .item-descripcion {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--gris);
+  margin-top: 0.15rem;
+}
+
+.menu-app .item-precio {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  white-space: nowrap;
+  color: var(--carbon);
+}
+
+.menu-app .badge-sin-tacc {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+  font-family: "Lora", serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--carbon);
+  border: 1px solid var(--menta);
+  background: var(--menta-suave);
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+}
+
+.menu-app .badge-sin-tacc svg {
+  width: 11px;
+  height: 11px;
+  fill: none;
+  stroke: var(--carbon);
+  stroke-width: 1.2;
+}
+
+.menu-app .item.agotado .item-nombre, .menu-app .item.agotado .item-precio, .menu-app .item.agotado .item-descripcion {
+  color: #6E9E8E;
+  text-decoration: line-through;
+}
+
+.menu-app .badge-agotado {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-family: "Lora", serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--gris);
+  border: 1px solid var(--linea);
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.menu-app .pie {
+  text-align: center;
+  padding: 2.5rem 1rem 3.5rem;
+  font-size: 0.8rem;
+  color: var(--gris);
+  letter-spacing: 0.04em;
+}
+
+.menu-app .pie .ornamento {
+  margin-bottom: 0.9rem;
+}
+
+@media (max-width: 480px) {
+.menu-app .menu-hero {
+    padding: 3rem 1rem 2rem;
+}
+
+.menu-app .menu-hero h1 {
+    font-size: 2.6rem;
+}
+
+.menu-app .hero-script {
+    font-size: 1.5rem;
+}
+
+.menu-app .menu {
+    padding: 0.5rem 1.1rem 2rem;
+}
+
+.menu-app .categoria h2 {
+    font-size: 1.7rem;
+}
+
+.menu-app .subcategoria {
+    font-size: 1.35rem;
+}
+
+.menu-app .item-nombre, .menu-app .item-precio {
+    font-size: 1.02rem;
+}
+}
+
+/* ---------- Ajustes para integrar el menú en la web ---------- */
+
+/* El header de la web es fijo: el menú pegajoso y las anclas se corren debajo */
+.menu-app .navegacion {
+  top: var(--header-h, 84px);
+}
+
+.menu-app .categoria {
+  scroll-margin-top: calc(var(--header-h, 84px) + 3rem);
+}
+
+/* Pie del menú: nota de precios + botón de pedido */
+.menu-app .menu-pie {
+  text-align: center;
+  padding: 2.5rem 1rem 3.5rem;
+}
+
+.menu-app .menu-pie__texto {
+  font-size: 0.8rem;
+  color: var(--gris);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+}
+
+.menu-app .menu-pie .btn--primary {
+  background-color: var(--carbon);
+  color: #FFFFFF;
+}
+
+.menu-app .menu-pie .btn--primary:hover,
+.menu-app .menu-pie .btn--primary:focus-visible {
+  transform: translateY(-2px);
+}
